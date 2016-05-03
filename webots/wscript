@@ -1,0 +1,20 @@
+## -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+def build(bld):
+    module = bld.create_ns3_module('webots', ['facilities',  'wave'])
+    module.source = [
+		'webots_ns3.cc',
+		'ns3-utils.cc',
+                ]
+
+    headers = bld(features='ns3header')
+    headers.module = 'webots'
+    headers.source = [
+		'webots_radio.h',
+		'ns3-utils.h',
+                ]
+
+    if (bld.env['ENABLE_EXAMPLES']):
+      bld.recurse('examples')
+
+    bld.ns3_python_bindings()
