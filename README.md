@@ -1,6 +1,7 @@
 # Bidirectional coupling of vehicle and networks simulators: A ns-3 plugin for webots
 
 ## Notice
+```
   Copyright (c) 2017 EPFL TUD
   Distributed Intelligent Systems and Algorithms Laboratory,
   Ecole polytechnique fédérale de Lausanne
@@ -28,7 +29,7 @@
   David Mansolino <david.mansolino@cyberbotics.com>,
   Guillaume Jornod <guillaume.jornod@gmail.com>,
   Sebastian Kühlmorgen <sebastian.kuehlmorgen@tud.de>
-
+```
 ## Introduction notes
 This page introduces a plugin allowing to use ns-3 as a VANET simulator within webots.
 It has been developed jointly at the Distributed Intelligent Systems and Algorithm Laboratory (DISAL) at Ecole polytechnique fédérale de Lausanne (EPFL) and Techische Universität Dresden (TUD).
