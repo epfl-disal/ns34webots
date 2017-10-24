@@ -41,6 +41,7 @@ Please cite as Llatser, I., Jornod, G., Festag, A., Mansolino, D., Navarro, I., 
   author={Llatser, Ignacio and Jornod, Guillaume and Festag, Andreas and Mansolino, David and Navarro, Inaki and Martinoli, Alcherio},
   booktitle={Intelligent Vehicles Symposium (IV), 2017 IEEE},
   year={2017},
+  pages={1881--1886},
   organization={IEEE}
 }
 ```
