@@ -94,9 +94,25 @@ To be used within a webots world, the radio should be added in the `sensorsSlotC
     bitrate 6000000
   }
 ```
-The radio is then used with the following commands:
+The radio is then accessed, having first included `radio.h`, with the following commands:
 ```
-  radio = wb_robot_get_device("radio");
+ radio = wb_robot_get_device("radio");
   wb_radio_enable(radio, SIM_TIMESTEP);
   wb_radio_set_callback(radio, CALLBACK);
 ```
+where `SIM_TIMESTEP` is the size of the timestep of the control loop in milliseconds and `CALLBACK` is the function of the form
+
+```
+  void function CALLBACK(WbRadioEvent event)
+  {
+  	const DATA_TYPE* msg = reinterpret_cast<DATA_TYPE*>(wb_radio_event_get_data(event));
+  }
+```
+
+Finally, use:
+```
+   WbRadioMessage msg_radio = wb_radio_message_new((int)sizeof(*DATA),(const char *)DATA, "255.255.255.255");
+   // Generate a random delay before each message transmission
+   wb_radio_send(radio, msg_radio, DELAY);
+```
+to send a message
