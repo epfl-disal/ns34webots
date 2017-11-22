@@ -115,4 +115,4 @@ Finally, use:
    // Generate a random delay before each message transmission
    wb_radio_send(radio, msg_radio, DELAY);
 ```
-to send a message
+to send a message, where DATA is the data to be sent and DELAY is a delay used to avoid collisions due to the fact that all agents are exactly synchronized in simulation.
