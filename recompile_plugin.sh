@@ -22,6 +22,4 @@ done
 echo 'Creating libomnet.so for webots'
 cp build/libns3-dev-webots-optimized.so ../../plugins/radio/omnet/libomnet.so
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:../../plugins/radio/omnet/dependencies #make sure dependencies are found by Webots/plugin
-rm -r ../../../accvscacc/convoy_epfl/webots/plugins/radio/omnet/*
-cp -r ../../plugins/radio/omnet/ ../../../accvscacc/convoy_epfl/webots/plugins/radio/
 
